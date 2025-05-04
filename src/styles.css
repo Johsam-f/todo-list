@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Comic+Relief:wght@400;700&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Playwrite+IT+Moderna:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sofadi+One&family=Tagesschrift&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Comic Relief", system-ui;
+    background-color: #333;
+    color: #fff;
+}
+
+#navigation > div{
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+    border-radius: 50px;
+}
+
+#navigation > div:last-of-type{
+    width: 25px;
+}
+
+#navigation:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+}
+
+header{
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+    font-style: italic;
+    height: 40px;
+}
+
+#content{
+    min-height: calc(100vh - 60px);
+    display: flex;
+}
+
+/* navigations */
+
+nav{
+    height:inherit;
+    width: 10rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-top-right-radius: 10px;
+    padding: 10px;
+    transition: transform 0.6s ease-out;
+}
+
+.hide-nav{
+    transform: translateX(-100%);
+    /* opacity: 0; */
+    /* position: absolute; */
+}
+
+.btn{
+    display: block;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.1rem;
+    font-style: italic;
+    height: 20px;
+    margin: 10px;
+}
+
+.btn:hover{
+    color: #cdcdcd;
+    border-bottom: 2px solid #cdcdcd;
+}
+
+.fa-add{
+    font-size: 1rem;
+}
+
+h2{
+    border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+}
+
+/* content styles */
+
+#inner-content{
+    padding: 10px;
+    flex: 1;
+    transition: transform 0.6s ease-out;
+}
+  
+.nav-hidden {
+    transform: translateX(-10rem); /* equal to nav width */ 
+}
+
+/* pop_ups */
+
+.pop-ups{
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100vw;
+    backdrop-filter: blur(3px);
+    text-align: center;
+}
+
+input{
+    display: block;
+    height: 2rem;
+    margin: 10px 0;
+    outline: none;
+    background: #444;
+    color: #fff;
+    border: none;
+    padding: 5px;
+}
+
+.flex{
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+form button{
+    padding: 5px;
+    border-radius: 5px;
+    min-width: 40px;
+}
+
+form button:hover{
+    background-color: #cdcdcd;
+}
+
+.hidden{
+    display: none;
+}
