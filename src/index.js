@@ -4,6 +4,7 @@ import './styles.css';
 const nav_status = document.querySelector("nav");
 const content = document.getElementById("inner-content");
 const project_menu = document.querySelector(".add-projects");
+const task_menu = document.querySelector(".add-tasks");
 
 
 document.getElementById("navigation").addEventListener('click', ()=>{
@@ -13,6 +14,10 @@ document.getElementById("navigation").addEventListener('click', ()=>{
 
 document.getElementById("add-project-btn").addEventListener('click', ()=>{
     project_menu.classList.toggle("hidden")
+});
+
+document.getElementById("add-task-btn").addEventListener('click', ()=>{
+    task_menu.classList.toggle("hidden")
 });
 
 document.querySelectorAll(".cancel-btn").forEach(btn => {
