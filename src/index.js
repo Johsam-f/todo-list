@@ -10,7 +10,7 @@ const task_menu = document.querySelector(".add-tasks");
 document.getElementById("navigation").addEventListener('click', ()=>{
     content.classList.toggle("nav-hidden");
     nav_status.classList.toggle('hide-nav');
-});
+}); 
 
 document.getElementById("add-project-btn").addEventListener('click', ()=>{
     project_menu.classList.toggle("hidden")
