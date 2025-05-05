@@ -146,8 +146,9 @@ form button:hover{
     display: none;
 }
 
-#add-task-btn{
-    transform: translateX(30px);
+#add-task-btn,
+#add-project-btn{
+    transform: translateX(20px);
 }
 
 p{

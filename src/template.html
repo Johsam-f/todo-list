@@ -26,7 +26,7 @@
         <button class="btn">View All Tasks</button>
         <button class="btn">Tasks Done</button>
         <button class="btn">Tasks Undone</button>
-        <h2>Projects</h2>
+        <h2 id="project-list-heading">Projects</h2>
         <button id="add-project-btn" class="btn">
           <i class="fas fa-add"></i> Add Project
         </button>
@@ -48,10 +48,12 @@
     <section class="pop-ups hidden add-projects">
       <form action="">
         <label for="Project_name">Name of Project</label>
-        <input type="text" />
+        <input type="text" name="Project_name" id="Project-name" />
         <div class="flex">
           <button type="reset" class="cancel-btn">cancel</button>
-          <button type="submit"><i class="fas fa-add"></i></button>
+          <button id="submit-project-btn" type="submit">
+            <i class="fas fa-add"></i>
+          </button>
         </div>
       </form>
     </section>

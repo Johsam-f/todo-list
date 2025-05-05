@@ -1,4 +1,6 @@
 import './styles.css';
+import './projects';
+import add_project from './projects';
 
 
 const nav_status = document.querySelector("nav");
@@ -24,5 +26,4 @@ document.querySelectorAll(".cancel-btn").forEach(btn => {
     btn.addEventListener("click", (e) => {
       e.target.closest(".pop-ups").classList.add("hidden");
     });
-  });
-  
+});
