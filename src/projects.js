@@ -21,7 +21,7 @@ function saveProjectToStorage(projectName) {
 }
 
 function renderProjects() {
-  const project_list = document.getElementById("project-list-heading");
+  const project_list = document.getElementById("projects-container");
 
   // Remove old buttons
   document.querySelectorAll(".project-btn").forEach(btn => btn.remove());
@@ -30,8 +30,8 @@ function renderProjects() {
 
   projects.forEach(project => {
     project_list.insertAdjacentHTML(
-      "afterend",
-      `<button class="btn project-btn" id="${project}">${project}</button>`
+      "beforeend",
+      `<button class="btn project-btn nav-btn" data-name="${project}">${project}</button>`
     );
   });
 }

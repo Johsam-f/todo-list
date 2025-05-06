@@ -27,6 +27,7 @@ body{
 #navigation:hover{
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 2px;
+    cursor: pointer;
 }
 
 header{
@@ -47,15 +48,22 @@ header{
 /* navigations */
 
 nav{
-    height:inherit;
     width: 10rem;
     background-color: rgba(0, 0, 0, 0.4);
     border-top-right-radius: 10px;
     padding: 10px;
+    overflow: hidden;
 }
 
+.project-btn {
+    display: inline-block;
+    max-width: 8rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}  
+
 .hide-nav{
-    /* transform: translateX(-100%); */
     display: none;
 }
 
@@ -74,6 +82,7 @@ nav{
     font-style: italic;
     height: 20px;
     margin: 10px;
+    cursor: pointer;
 }
 
 .btn:hover{
@@ -158,6 +167,7 @@ p{
 .x-btn{
     display: inline;
     margin: 0;
+    cursor: pointer;
 }
 
 #inner-content > div{
@@ -171,6 +181,7 @@ p{
     margin-bottom: 10px;
     font-size: 0.9rem;
     width: 100%;
+    padding: 5px;
 }
 
 #inner-content > div:hover{
@@ -184,6 +195,51 @@ p{
     margin-right: 10px; 
 }
 
-.status{
+.priority{
     margin: 0 5px;
+}
+
+.active-btn{
+    font-weight: 900;
+    border-bottom: 3px dotted rgba(255, 255, 255, 0.5);
+    width: 90%;
+    text-align: start;
+}
+
+@media (max-width: 640px) {
+    .task {
+        font-size: 0.8rem;
+    }
+
+    .task > .title{
+        width: 7rem;
+    }
+
+    .task > span{
+        font-size: 0.5rem;
+    }
+
+    nav{
+        width: 33%;
+    }
+    .btn{
+        font-size: 0.8rem;
+        height: 20px;
+    }
+    #inner-content{
+        width: 60%;
+    }
+
+
+    .project-btn {
+        max-width: 87%;
+    } 
+
+    #add-project-btn{
+        margin-left: 0;
+    }
+
+    h2{
+        font-size: 1rem;
+    }
 }
