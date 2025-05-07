@@ -9,6 +9,11 @@ add_project_form.addEventListener("submit", (e) => {
   saveProjectToStorage(project_name);
   renderProjects();
   add_project_form.reset();
+  document.querySelectorAll(".pop-ups").forEach(popup => {
+    if (!popup.classList.contains("hidden")) {
+        popup.classList.add("hidden");
+    }
+});
 });
 
 function saveProjectToStorage(projectName) {

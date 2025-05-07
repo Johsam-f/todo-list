@@ -6,6 +6,12 @@ let current_view_status = "all";
 add_task_form.addEventListener("submit", (e) => {
     e.preventDefault();
     add_task();
+
+    document.querySelectorAll(".pop-ups").forEach(popup => {
+        if (!popup.classList.contains("hidden")) {
+            popup.classList.add("hidden");
+        }
+    });    
 });
 
 function createTask(title, description, due_date, priority = "low", project = "default") {
