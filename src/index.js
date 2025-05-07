@@ -17,6 +17,7 @@ document.getElementById("add-project-btn").addEventListener('click', ()=>{
     project_menu.classList.toggle("hidden")
 });
 
+//cancel btn for submitting task
 document.querySelectorAll(".cancel-btn").forEach(btn => {
     btn.addEventListener("click", (e) => {
       e.target.closest(".pop-ups").classList.add("hidden");

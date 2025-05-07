@@ -12,7 +12,7 @@
   </head>
   <body>
     <header>
-      <div id="navigation">
+      <div id="navigation" title="navigation">
         <div></div>
         <div></div>
         <div></div>
@@ -24,9 +24,13 @@
       <nav>
         <h2>Home</h2>
         <div class="tasks-btn">
-          <button class="btn nav-btn" id="view-all-tasks">View Tasks</button>
-          <button class="btn nav-btn">Tasks Done</button>
-          <button class="btn nav-btn">Tasks Undone</button>
+          <button class="btn nav-btn active-btn" id="view-all-tasks">
+            View Tasks
+          </button>
+          <button class="btn nav-btn" id="view-done-tasks">Tasks Done</button>
+          <button class="btn nav-btn" id="view-undone-tasks">
+            Tasks Undone
+          </button>
         </div>
         <h2 id="project-list-heading">Projects</h2>
         <div id="projects-container"></div>
@@ -37,6 +41,7 @@
       <section id="inner-content"></section>
     </section>
     <section class="pop-ups hidden add-projects">
+      <button class="btn close-pop-up cancel-btn">X</button>
       <form action="">
         <label for="Project_name">Name of Project</label>
         <input type="text" name="Project_name" id="Project-name" />
@@ -49,6 +54,7 @@
       </form>
     </section>
     <section class="pop-ups hidden add-tasks">
+      <button class="btn close-pop-up cancel-btn">X</button>
       <form action="">
         <label for="title">Title</label>
         <input type="text" name="title" id="title" required />
@@ -66,9 +72,16 @@
 
         <div class="flex">
           <button type="reset" class="cancel-btn">cancel</button>
-          <button type="submit"><i class="fas fa-add"></i></button>
+          <button type="submit" title="add task">
+            <i class="fas fa-add"></i>
+          </button>
         </div>
       </form>
+    </section>
+
+    <section class="pop-ups hidden display-task">
+      <button class="btn close-pop-up cancel-btn">X</button>
+      <div id="task-details"></div>
     </section>
   </body>
 </html>
