@@ -168,46 +168,6 @@ function delete_project(name){
     location.reload(); //for reloading page
 }
 
-// function display_task(title){
-//     const tasks = JSON.parse(localStorage.getItem("tasks"));
-//     tasks.forEach( task =>{
-//         if(task.title === title){
-//             document.querySelector(".display-task").classList.toggle("hidden");
-//             const render_details = document.getElementById("task-details");
-//             render_details.innerHTML = `
-//                 <h4>Title</h4>
-//                 <p>${task.title}</p>
-//                 <h4>Description</h4>
-//                 <p id="decrip-p">${task.description}</p>
-//                 <h4>Due Date</h4>
-//                 <p>${task.due_date}</p>
-//                 <h4>Priority</h4>
-//                 <p>${task.priority}</p>
-//                 <h5>Check whether task is complete or not</h5>
-//                 <div>
-//                     <label><input type="radio" name="status" value="done" ${task.status === "done" ? "checked" : ""}> Done</label>
-//                     <label><input type="radio" name="status" value="undone" ${task.status === "undone" ? "checked" : ""}> Undone</label>
-//                 </div>
-//                 <!--<div>
-//                     <label for="done">done</label>
-//                     <input type="radio" name="status" value="done" />
-//                     <label for="undone">Undone</label>
-//                     <input type="radio" name="status" value="undone" />
-//                 </div>-->
-//             `;
-
-//              // Attach event listener to update status
-//             render_details.querySelectorAll('input[name="status"]').forEach(radio => {
-//             radio.addEventListener('change', (e) => {
-//                 tasks[taskIndex].status = e.target.value;
-//                 localStorage.setItem("tasks", JSON.stringify(tasks));
-//                 renderTasks(); // Optional: refresh UI if needed
-//             });
-//         });
-//         }
-//     });
-// }
-
 function display_task(title) {
     let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
