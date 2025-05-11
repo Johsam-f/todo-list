@@ -4,12 +4,10 @@ import './tasks';
 
 
 const nav_status = document.querySelector("nav");
-const content = document.getElementById("inner-content");
 const project_menu = document.querySelector(".add-projects");
 
 
 document.getElementById("navigation").addEventListener('click', ()=>{
-    content.classList.toggle("nav-hidden");
     nav_status.classList.toggle('hide-nav');
 }); 
 
